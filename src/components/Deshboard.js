@@ -1,37 +1,26 @@
-import React, { useState } from "react";
 import Family from "./Family";
+import useFetch from "../useFetch";
+import { useEffect, useState } from "react";
 
 function Deshboard() {
-  let [members, setMember] = useState([
-    {
-      name: "himanshu",
-      email: "himanshu@gmail.com",
-    },
-    {
-      name: "deven",
-      email: "deven@gmail.com",
-    },
-  ]);
+  const [members, setmembers] = useState([]);
+  const { data, ispending, error } = useFetch(
+    "http://localhost:5000/memberlist/60bcc6e83a0d25360c333171"
+  );
+
+  useEffect(() => {
+    setmembers(data);
+  }, [data]);
+
   const addmember = (newmember) => {
     console.log(newmember);
-    setMember([...members, newmember]);
-  };
-  const memberList = () => {
-    return members.map((mab) => {
-      return (
-        <div>
-          <h1>{mab.name}</h1>
-          <p>{mab.email}</p>
-        </div>
-      );
-    });
+    setmembers([...members, newmember]);
   };
   return (
-    <div class="container mx-auto">
-      <button> Add member </button>
-      <button> Task List </button>
-      <Family members={members} addmember={addmember} />
-      {memberList()}
+    <div>
+      {error && <div>{error}</div>}
+      {ispending && <div>lodding .....</div>}
+      {data && <Family members={members} addmember={addmember} />}
     </div>
   );
 }

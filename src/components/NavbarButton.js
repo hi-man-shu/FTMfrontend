@@ -5,17 +5,22 @@ function NavbarButton() {
     <div className="m-2 flex flex-row p-2 mb-5 space-x-5">
       <Link
         to="/login"
-        className=" bg-blue-400  hover:bg-blue-700 text-black px-3 py-1 rounded text-lg focus:outline-none shadow"
+        className=" hover:bg-blue-700 active:bg-pink-600 text-black px-3 py-1 rounded text-lg focus:outline-none "
       >
         Sign-In
       </Link>
       <Link
         to="/ragister"
-        className="bg-blue-400 hover:bg-blue-700 text-black  px-3 py-1 rounded text-lg focus:outline-none shadow"
+        className=" hover:bg-blue-700 active:bg-pink-600 text-black  px-3 py-1 rounded text-lg focus:outline-none "
       >
         Sign-up
       </Link>
-      <div className="w-40 "></div>
+      <Link
+        to="/dashboard"
+        className=" hover:bg-blue-700 active:bg-pink-600 text-black  px-3 py-1 rounded text-lg focus:outline-none "
+      >
+        dashboard
+      </Link>
     </div>
   );
 }

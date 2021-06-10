@@ -1,7 +1,6 @@
 import "../App.css";
 import {useState} from 'react'
 import React from 'react'
-import {Link} from 'react-router-dom'
 import NavbarButton from "./NavbarButton";
 
 
@@ -14,18 +13,10 @@ function Login() {
         const loginvalue = {email,password}
         console.log(loginvalue)
     }
-    // const toggle = ()=>{
-    //     if(classes === "active good"){
-    //         setclasses('deactive')
-    //     }else{
-    //         setclasses('active good')
-    //     }
-    // }
-    
-
+   
 return( 
 <div className="w-full h-screen flex">
-            <img src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="background" className="object-cover object-center h-screen w-6/12" />
+            <img src="http://images.unsplash.com/photo-1475503572774-15a45e5d60b9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80" loading="lazy" alt="background" className="object-cover object-center h-screen w-6/12" />
     <div className="bg-white flex flex-col justify-center items-center w-6/12 shadow-lg">
         <NavbarButton />
             <div className="w-1/2">

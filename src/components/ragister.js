@@ -7,20 +7,11 @@ function Ragister() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassward] = useState("");
-  //const [classes,setclasses] = useState('active good')
   function onSubmit(e) {
     e.preventDefault();
     const loginvalue = { username, email, password };
     console.log(loginvalue);
   }
-  // const toggle = ()=>{
-  //     if(classes === "active good"){
-  //         setclasses('deactive')
-  //     }else{
-  //         setclasses('active good')
-  //     }
-  // }
-
   return (
     <div className="w-full h-screen flex">
       <img
