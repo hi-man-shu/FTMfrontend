@@ -1,46 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import Memberlist from "./Memberlist";
+import Createmember from "./Createmember";
 
 function Family(props) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-
-  const createmember = (e) => {
-    e.preventDefault();
-    const family = {
-      name,
-      email,
-    };
-    return props.addmember(family);
-  };
-
   return (
-    <div>
-      {props.members &&
-        props.members.map((member) => (
-          <Memberlist member={member} key={member._id} />
-        ))}
-
-      <form onSubmit={createmember}>
-        <label>
-          <input
-            type="text"
-            name="name"
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Enter your name"
-          />
-        </label>
-        <label>
-          <input
-            type="text"
-            name="email"
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-          />
-        </label>
-        <input type="submit" value="Save" />
-      </form>
-    </div>
+    <>
+      <div className="w-half bg-gray-600 h-full">
+        {props.members &&
+          props.members.map((member) => (
+            <Memberlist member={member} key={member._id} />
+          ))}
+      </div>
+      <div>
+        <Createmember addmember={props.addmember} />
+      </div>
+    </>
   );
 }
 

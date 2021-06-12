@@ -1,4 +1,5 @@
 import Family from "./Family";
+import Loader from "./Loader";
 import useFetch from "../useFetch";
 import { useEffect, useState } from "react";
 
@@ -17,9 +18,9 @@ function Deshboard() {
     setmembers([...members, newmember]);
   };
   return (
-    <div>
+    <div className="w-full h-auto bg-green-500  flex flex-col sm:flex-row justify-center flex-auto">
       {error && <div>{error}</div>}
-      {ispending && <div>lodding .....</div>}
+      {ispending && <Loader />}
       {data && <Family members={members} addmember={addmember} />}
     </div>
   );
