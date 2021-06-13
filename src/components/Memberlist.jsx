@@ -2,10 +2,9 @@ import React from 'react'
 
 function memberlist({member}) {
     return (
-      <div className="w-half object-cover object-center text-center bg-center text-gray-700 border-red-600 border-solid border-opacity-100 border-1 rounded-lg hover:bg-black hover:text-white">
-         <h1>{member.email}</h1>
-         <h1>{member.familyId}</h1>
-         <h1>{member.role}</h1>
+      <div className="bg-gray-400 rounded-md space-x-1 space-y-1 mb-2 w-full p-2 flex justify-between">
+        <span className="text-lg font-sarif font-semibold text-opacity-80">{member.email}</span>
+        <span className="bg-green-600 font-mono rounded-xl p-2 font-semibold items-baseline">{member.role}</span>
       </div>
     )
 }

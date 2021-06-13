@@ -1,7 +1,10 @@
 import Family from "./Family";
 import Loader from "./Loader";
 import useFetch from "../useFetch";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+import memberlist from "./Memberlist";
+import Createmember from "./Createmember";
 
 function Deshboard() {
   const [members, setmembers] = useState([]);
@@ -18,7 +21,7 @@ function Deshboard() {
     setmembers([...members, newmember]);
   };
   return (
-    <div className="w-full h-auto bg-green-500  flex flex-col sm:flex-row justify-center flex-auto">
+    <div className="flex bg-gray-100 h-screen w-full">
       {error && <div>{error}</div>}
       {ispending && <Loader />}
       {data && <Family members={members} addmember={addmember} />}

@@ -15,7 +15,7 @@ function Createtask(props) {
      return props.addtask(task);
   };
     return (
-        <div className="text-lg">
+        <div className="text-lg w-1/2">
         <form className="grid grid-flow-row" onSubmit={Createtask} >
             
             <label>
