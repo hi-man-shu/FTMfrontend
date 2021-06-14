@@ -5,6 +5,7 @@ import Ragister from "./components/ragister";
 // import Dashboard from "./components/Deshboard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Family from "./components/Family";
+import Createtask from "./components/Createtask";
 function App() {
   return (
     <Router>
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/" component={Login} />
           <Route path="/ragister" component={Ragister} />
           <Route path="/family" component={Family} />
+          <Route path="/createtask" component={Createtask} />
           {/* <Route path="/tasks" component={Tasks} /> */}
         </Switch>
       </div>

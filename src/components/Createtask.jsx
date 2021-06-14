@@ -26,8 +26,6 @@ function Createtask(props) {
             placeholder=""
           />
         </label>
-            
-        
         <label>
           <input
             type="text"
