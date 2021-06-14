@@ -23,7 +23,7 @@ function Createtask(props) {
             type="text"
             name="name"
             onChange={(e) => setName(e.target.value)}
-            placeholder="Enter your name"
+            placeholder=""
           />
         </label>
             

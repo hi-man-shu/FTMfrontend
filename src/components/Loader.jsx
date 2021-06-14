@@ -1,6 +1,6 @@
 
 const Loader = () => {
-    let circleCommonClasses = 'h-2.5 w-2.5 bg-gray-500 rounded-full';
+    let circleCommonClasses = 'flex justify-center h-2.5 w-2.5 bg-gray-500 rounded-full';
 
     return (
    <div className='flex'>
